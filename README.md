@@ -1,24 +1,34 @@
-# README
+# DB 設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
 
-Things you may want to cover:
+| Column                | Type                | Options                   |
+|-----------------------|---------------------|---------------------------|
+| name                  | string              | null: false               |
+| email                 | string              | null: false,unique:true   |
+| encrypted_password    | string              | null: false               |
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Association
 
-* Database creation
+* has_one :application
 
-* Database initialization
 
-* How to run the test suite
+## reservations table
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column           | Type       | Options                        |
+|------------------|------------|--------------------------------|
+| plan_id          | integer    | null: false                    |
+| number_id        | integer    | null: false                    |
+| children_name    | string     | null: false                    |
+| age_id           | integer    | null: false                    |
+| allergy          | string     |                                |
+| nationality      | string     | null: false                    |
+| phone_number     | string     | null: false                    |
+| contact          | text       |                                |
+| user             | references | null: false, foreign_key: true |
 
-* Deployment instructions
 
-* ...
+### Association
+- belongs_to :user
