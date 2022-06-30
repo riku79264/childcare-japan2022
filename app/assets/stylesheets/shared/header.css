@@ -23,7 +23,7 @@
 
 .lists-left {
   display: flex;
-  min-width: 200px;
+  /* min-width: 200px; */
   list-style: none;
 }
 
@@ -71,18 +71,14 @@
   color: #333333;
 }
 
-/* @media (max-width: 599px) {
+@media (max-width: 599px) {
   .lists-left {
-    font-size: 15px;
-    display: flex;
+    font-size: 3px;
+
   }
   .lists-right {
-    font-size: 15px;
-    display: flex;
+    font-size: 3px;
   }
-  .nav {
-    display: flex;
-    justify-content: space-between;
-  }
+
   
-} */
+}
