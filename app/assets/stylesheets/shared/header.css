@@ -71,7 +71,7 @@
   color: #333333;
 }
 
-/* @media (max-width: 599px) {
+@media (max-width: 599px) {
   * {
     box-sizing: border-box;
   }
@@ -82,4 +82,4 @@
     list-style: none;
   }
   
-} */
+}
