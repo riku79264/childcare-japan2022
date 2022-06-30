@@ -51,6 +51,9 @@
 }
 
 
-/* @media (max-width: 599px) {
- 
-} */
+@media (max-width: 599px) {
+  .form-group {
+    width: 80%;
+   
+  }
+}
