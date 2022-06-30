@@ -74,10 +74,15 @@
 @media (max-width: 599px) {
   .lists-left {
     font-size: 15px;
+    display: flex;
   }
   .lists-right {
     font-size: 15px;
+    display: flex;
   }
-  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
   
 }
