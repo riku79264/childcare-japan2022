@@ -72,9 +72,14 @@
 }
 
 @media (max-width: 599px) {
+  * {
+    box-sizing: border-box;
+  }
+  
   .lists-left {
     display: flex;
-    min-width: 10px;
+    min-width: 5px;
     list-style: none;
   }
+  
 }
