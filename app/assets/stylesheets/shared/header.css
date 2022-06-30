@@ -27,6 +27,7 @@
   list-style: none;
 }
 
+
 .category-list {
   text-decoration: none;
   margin-right: 3vw;
@@ -68,4 +69,12 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
+}
+
+@media (max-width: 599px) {
+  .lists-left {
+    display: flex;
+    min-width: 10px;
+    list-style: none;
+  }
 }

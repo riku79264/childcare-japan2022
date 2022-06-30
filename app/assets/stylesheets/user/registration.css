@@ -51,6 +51,7 @@
   resize: none;
 }
 
+
 @media (max-width: 599px) {
   .form-header {
   width: 100%;
