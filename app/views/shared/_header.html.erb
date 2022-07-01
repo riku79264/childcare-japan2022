@@ -1,18 +1,16 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <li><%= link_to '試み', "#", class: "category-list" %></li>
-      <li><%= link_to '１日の流れ', "#", class: "brand-list" %></li>
+<header>
+    <ul>
+      <li><%= link_to 'commpany', "#", class: "category-list" %></li>
+      <li><%= link_to 'plan', "#", class: "category-list" %></li>
+      <li><%= link_to 'reserve', "#", class: "brand-list" %></li>
     </ul>
-    <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.name, "#", class: "user-nickname"  %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
-      <% else %>  
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>  
-    </ul>
-  </div>
+    <nav class="pc-nav">
+      <ul>
+        <li><%= link_to 'login', new_user_session_path, class: "login" %></li>
+        <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
+      </ul>
+    </nav>
 </header>
+<div class="main-visual">
+   <h2>Take care of your child</h2>
+</div>

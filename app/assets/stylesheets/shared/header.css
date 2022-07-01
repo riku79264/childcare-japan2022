@@ -2,85 +2,57 @@
   box-sizing: border-box;
 }
 
-.top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "MS Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing : 0.2em;
+  background-color: #faf4f4;
+  height: 100vh;
 }
 
-
-.nav {
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+header {
   width: 100%;
-  padding: 1vh 0;
-}
-
-.lists-left {
+  padding: 30px 4% 10px;
+  position: fixed;
+  top: 0;
   display: flex;
-  /* min-width: 200px; */
-  list-style: none;
   align-items: center;
 }
 
-
-.category-list {
+a {	
   text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
+  color: #161515;
 }
 
-.brand-list {
-  text-decoration: none;
-  color: #333333;
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+   margin: 0; padding: 0;
 }
 
-.lists-right {
+li {
+  margin: 0 5px 0 19px;
+  font-size: 18px;
+}
+
+nav {
+  margin: 0 0 0 auto;
+}
+
+.main-visual {
   display: flex;
-  list-style: none;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  background: url('main_visual.jpg') top center / cover no-repeat;
+  width: 33%;
 }
 
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
-}
-
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: #333333;
-}
-
-@media (max-width: 599px) {
-  
-  .lists-left {
-    font-size: 12px;
-
-  }
-  .lists-right {
-    font-size: 12px;
-  }
-
-  
+h2 {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
 }
