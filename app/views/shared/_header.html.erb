@@ -4,13 +4,16 @@
       <li><%= link_to 'plan', "#", class: "category-list" %></li>
       <li><%= link_to 'reserve', "#", class: "brand-list" %></li>
     </ul>
-    <nav class="pc-nav">
+    <nav class="nav">
       <ul>
-        <li><%= link_to 'login', new_user_session_path, class: "login" %></li>
-        <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.name, "#", class: "user-nickname"  %></li>
+          <li><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+        <% else %>  
+          <li><%= link_to 'login', new_user_session_path, class: "login" %></li>
+          <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>  
       </ul>
     </nav>
 </header>
-<div class="main-visual">
-   <h2>Take care of your child</h2>
-</div>
+
