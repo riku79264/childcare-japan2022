@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  background-color: #faf4f4;
+  align-items: center;
+}
+
+.main-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('main_visual.jpg') top center / cover no-repeat;
+  width: 33%;
+}
+
+p {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+}
