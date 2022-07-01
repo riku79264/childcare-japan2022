@@ -1,7 +1,6 @@
-.main {
+
+.contents {
   display: flex;
-  background-color: #faf4f4;
-  align-items: center;
 }
 
 .main-visual {
@@ -18,4 +17,44 @@ p {
   font-size: 30px;
   font-weight: normal;
   color: #fff;
+}
+
+// plan一覧
+.ad-explain {
+  margin: 250px 0 0 100px;
+}
+
+.plan-form {
+  border-radius: 20px;
+  height: 500px;
+  margin: 100px 10px 5px 50px;
+}
+
+.ad-plan {
+  text-align: center;
+  font-size: 30px;
+  // border-bottom: solid rgb(226, 225, 225);
+}
+.pricecards {
+  text-align: center;
+}
+
+.pricecard-free {
+  border: solid rgb(226, 225, 225);
+  margin-top: 10px;
+  border-radius: 20px;
+  height: 300px;
+}
+
+.pricecards h3 {
+  // text-align: center;
+}
+
+.pricecards h4 {
+  font-size: 200%;
+  // text-align: center;
+}
+
+.per {
+  // text-align: center;
 }
