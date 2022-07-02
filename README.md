@@ -26,7 +26,6 @@
 
 | Column           | Type       | Options                        |
 |------------------|------------|--------------------------------|
-| plan_id          | integer    | null: false                    |
 | number_id        | integer    | null: false                    |
 | children_name    | string     | null: false                    |
 | age_id           | integer    | null: false                    |
