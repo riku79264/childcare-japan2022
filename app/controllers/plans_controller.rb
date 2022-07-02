@@ -1,4 +1,4 @@
-class PlansController < ApplicationController
-  def index
-  end
-end
+# class PlansController < ApplicationController
+#   def index
+#   end
+# end
