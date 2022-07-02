@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_07_02_015216) do
   create_table "reservations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "children_number_id", null: false
     t.string "children_name", null: false
-    t.string "allergy"
+    t.text "allergy"
     t.integer "age_id", null: false
     t.string "nationality", null: false
     t.string "phone_number", null: false
