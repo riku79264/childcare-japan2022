@@ -12,8 +12,15 @@
 
 ### Association
 
-* has_one :application
+* has_one :reservation
 
+## plans table
+
+| Column                | Type                | Options                   |
+|-----------------------|---------------------|---------------------------|
+| plan                  | string              | null: false               |
+
+* has_one :reservation
 
 ## reservations table
 
@@ -28,6 +35,7 @@
 | phone_number     | string     | null: false                    |
 | contact          | text       |                                |
 | user             | references | null: false, foreign_key: true |
+| plan             | references | null: false, foreign_key: true |
 
 
 ### Association
