@@ -8,6 +8,7 @@ class CreateReservations < ActiveRecord::Migration[6.0]
       t.string :nationality,           null: false
       t.string :phone_number,          null: false
       t.text   :contact
+      t.integer :price,                null: false
       t.references :user,              null: false, foreign_key: true
       # t.references :plan                , null: false, foreign_key: true
 

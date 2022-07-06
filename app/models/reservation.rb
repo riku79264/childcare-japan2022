@@ -8,6 +8,7 @@ class Reservation < ApplicationRecord
     validates :children_name
     validates :nationality
     validates :phone_number
+    validates :price
     validates :user_id
   end  
   belongs_to :user
