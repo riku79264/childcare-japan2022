@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # resources :reservations
   resources :reservations do
     member do
-     get 'new2'
+     get :standard
+     get :advanced
     end 
+
   end  
 end
 
