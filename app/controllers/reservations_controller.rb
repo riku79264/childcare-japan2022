@@ -1,9 +1,11 @@
 class ReservationsController < ApplicationController
   def index
+    @reservation = Reservation.new
   end
 
   def new
     @reservation = Reservation.new
+
   end
 
   def create
@@ -14,11 +16,22 @@ class ReservationsController < ApplicationController
     else
       render :new
     end
+   
+
+
+  end
+
+  def standard
+    @reservation = Reservation.new
+  end
+
+  def advanced
+    @reservation = Reservation.new
   end
 
   private
 
   def reservation_params
-    params.require(:reservation).permit(:children_name, :children_number_id, :children_name, :allergy, :age_id, :nationality, :phone_number, :contact).merge(user_id: current_user.id)
+    params.require(:reservation).permit(:children_name, :children_number_id, :allergy, :age_id, :nationality, :phone_number, :contact, :price).merge(user_id: current_user.id)
   end
 end

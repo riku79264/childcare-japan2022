@@ -1,0 +1,85 @@
+
+.contents {
+  display: flex;
+}
+
+.main-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('main_visual.jpg') top center / cover no-repeat;
+  width: 33%;
+}
+
+p {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* // plan一覧 */
+.ad-explain {
+  margin: 250px 0 0 100px;
+}
+
+.plan-form {
+  height: 500px;
+  margin: 150px 25px 5px 30px;
+  text-align: center;
+}
+
+.ad-plan {
+  font-size: 40px;
+}
+
+.price-card {
+  border: solid rgb(226, 225, 225);
+  margin-top: 15px;
+  border-radius: 20px;
+  height: 400px;
+}
+
+.reserve-btn-text {
+  padding-top: 40px;
+}
+
+.price-card h3 {
+   margin-top: 10px;
+   border-bottom: solid rgb(226, 225, 225);
+ }
+
+.price-card h4 {
+   font-size: 200%;
+   margin-top: 40px;
+}
+
+.per {
+   font-size: 12px;
+}
+
+.plan-name-no {
+  margin-top: 35px;
+  font-size: 19px;
+}
+
+.plan-name-craft {
+  margin: 15px ;
+  font-size: 19px;
+}
+
+.plan-name-food {
+  margin-top: 35px;
+  font-size: 19px;
+}
+
+.plan-name-gift {
+  margin-bottom: 10px;
+}
+.reserve-btn-text {
+ border: solid rgb(226, 225, 225);
+ padding: 5px;
+ border-radius: 5px;
+ background-color:  rgb(234, 230, 230);
+}
