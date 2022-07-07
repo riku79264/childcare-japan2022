@@ -1,5 +1,5 @@
 <div class='transaction-contents'>
-  <%= form_with model: @reservation, local: true do |f|%>  
+  <%= form_with model: @reservation,  id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %> 
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
       申し込みプラン内容の確認
@@ -13,7 +13,7 @@
         </h2>
         <div class='buy-item-price'>
           <div class='item-price-text'>¥147</div> 
-          <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "147"  %>
+          <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "20000"  %>
         </div>
       </div>
     </div>
@@ -121,11 +121,12 @@
 
     <%# 下部ボタン %>
     <div class="reserve-btn-contents">
-      <li><%= f.submit "予約申し込み" ,class:"reserve-btn-text-final" %></li>
+      <li><%= f.submit "予約" ,class:"reserve-btn-text-final", id:"button"%></li>
       <li><%=link_to 'back', reservations_path, class:"back-btn-final" %></li>
     </div>
     <%# /下部ボタン %>
     <% end %>
   </div>  
 </div>  
+
 

@@ -1,4 +1,5 @@
 class Reservation < ApplicationRecord
+  attr_accessor :token
   with_options numericality: { other_than: 1, message: "can't be blank" } do
     validates :children_number_id
     validates :age_id
@@ -10,6 +11,7 @@ class Reservation < ApplicationRecord
     validates :phone_number
     validates :price
     validates :user_id
+    validates :token
   end  
   belongs_to :user
   

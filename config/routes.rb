@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: "reservations#index"
-  # resources :reservations
   resources :reservations do
-    member do
+    collection do
      get :standard
      get :advanced
     end 
@@ -12,5 +11,3 @@ Rails.application.routes.draw do
   end  
 end
 
-# get 'reservations/index'
-# get 'plans/index'
