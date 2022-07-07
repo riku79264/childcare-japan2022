@@ -35,10 +35,10 @@ class ReservationsController < ApplicationController
 
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]  
-    Payjp::Charge.create(
-      amount: reservation_params[:price], 
-      card: reservation_params[:token],    
-      currency: 'jpy'                
-    )
+      Payjp::Charge.create(
+        amount: reservation_params[:price], 
+        card: reservation_params[:token],    
+        currency: 'jpy'                
+      )
   end
 end
