@@ -1,10 +1,55 @@
-<div class='transaction-contents'>
-  <div class='transaction-main'>
-    <h1 class='transaction-title-text'>
-      購入プラン内容の確認
-    </h1>
-    <%# 購入プラン内容の表示 %>
-    
-    <%# /購入プラン内容の表示 %>
-  </div>  
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <div class='contents'>
+    <%# 画面左の「少女の写真」部分 %>
+    <div class='main-visual'>
+      <p>
+        Take care of your child
+      </p>
+    </div>
+    <%# 画面右の「事業説明」部分 %>
+    <div class='service-explain'>
+      <h2 class='ad-explain'>  
+        Our garden provides childcare for long-term Japanese tourists.
+        <br>Please spend a relaxing time as an adult<br>
+      </h2>
+      <%# 画面右の「プラン一覧」部分 %>
+      <div class='plan-form'>
+        <div class='ad-plan'>
+          plan
+        </div>
+        <ul class="plans">
+          <li class="price-card">
+            <h3>basic</h3>
+            <h4>¥96</h4>
+            <div class='per'>$/per child</div>
+            <div class='plan-name-no'>・No food experience<br>(bringing in meals)</div>
+            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div><%= link_to 'reserve', new_reservation_path, class:"reserve-btn-text" %></div>
+          </li>
+          <li class="price-card">
+            <h3>standard</h3>
+            <h4>¥147</h4>
+            <div class='per'>$/per child</div>
+            <div class='plan-name-food'>・food experience</div>
+            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div><%= link_to 'reserve', standard_reservations_path, class:"reserve-btn-text" %></div>
+          </li>
+          <li class="price-card">
+            <h3>advanced</h3>
+            <h4>¥221</h4>
+            <div class='per'>$/per child</div>
+            <div class='plan-name-food'>・food experience</div>
+            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div class='plan-name-gift'>・experience gift ticket</div>
+            <div><%= link_to 'reserve', advanced_reservations_path, class:"reserve-btn-text" %></div>
+          </li>
+        </ul>
+
+      </div>  
+    </div> 
+  </div>
+
 </div>

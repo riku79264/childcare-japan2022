@@ -1,5 +1,5 @@
 <div class='transaction-contents'>
-  <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+  <%= form_with model: @reservation, id: 'charge-form', local: true do |f|%>  
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
       申し込みプラン内容の確認
@@ -8,12 +8,13 @@
     <div class='buy-item-info'>
       <div class='buy-item-right-content'>
         <h2 class='buy-item-text'>
-          ・No food experience(bringing in meals)<br>
-          ・traditional craft experience
+          ・food experience<br>
+          ・traditional craft experience<br>
+          ・experience gift ticket
         </h2>
         <div class='buy-item-price'>
-          <div class='item-price-text'>¥96</div> 
-          <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
+          <div class='item-price-text'>¥221</div> 
+          <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "30000"  %>
         </div>
       </div>
     </div>
@@ -21,7 +22,7 @@
     
     <%= render 'shared/error_messages', model: f.object %>
     <%# カード情報の入力 %>
-    <div class='credit-card-form'>
+   <div class='credit-card-form'>
       <h1 class='info-input-haedline'>
         Payment Information
       </h1>
@@ -128,4 +129,5 @@
     <% end %>
   </div>  
 </div>  
+
 

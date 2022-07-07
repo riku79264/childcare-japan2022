@@ -1,0 +1,65 @@
+<%= form_with model: @reservation, local: true do |f|%>
+    <%= render 'shared/error_messages', model: f.object %>
+    <%# 申し込み時に必要な項目入力 %>
+    <div class='reservation-form'>
+      <h1 class='info-input-reservation'>
+        申し込み事項入力
+      </h1>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">children_number</label>
+          <span class="indispensable">必須</span>
+        </div>  
+        <%= f.collection_select(:children_number_id, ChildrenNumber.all, :id, :children_number, {}, {class:"select-box", id:"children-number"}) %>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">children_name</label>
+          <span class="indispensable">required</span>
+        </div>
+        <%= f.text_field :children_name, class:"input-form", id:"children-name", placeholder:"last_name  first_name", maxlength:"20" %>  
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">allergy</label>
+          <span class="indispensable">optional</span>
+        </div>  
+        <%= f.text_field :allergy, class:"input-form", id:"allergy", placeholder:"example）egg, wheat, shrmp...（Up to 200 characters）", maxlength:"200" %>  
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">age</label>
+          <span class="indispensable">required</span>
+        </div>
+        <%= f.collection_select(:age_id, Age.all, :id, :age, {}, {class:"select-box", id:"children-age"}) %>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">nationality</label>
+          <span class="indispensable">required</span>
+        </div>
+        <%= f.text_field :nationality, class:"input-form", id:"natinality", placeholder:"example）Japan/Japanese", maxlength:"20" %>  
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">phone_number</label>
+          <span class="indispensable">required</span>
+        </div>
+        <%= f.text_field :phone_number, class:"input-form", id:"phone-number", placeholder:"例）09012345678", maxlength:"11"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">contact</label>
+          <span class="indispensable">optional</span>
+        </div>
+         <%= f.text_field :contact, class:"input-form", id:"contact", placeholder:"(Up to 1000 characters)", maxlength:"1000"%>
+      </div>
+      <%# /申し込み内容の入力 %>
+      <%# 下部ボタン %>
+      <div class="reserve-btn-contents">
+        <%= f.submit "reserve" ,class:"reserve-btn" %>
+        <%=link_to 'back', reservations_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
