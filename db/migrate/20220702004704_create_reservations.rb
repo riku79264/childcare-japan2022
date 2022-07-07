@@ -10,7 +10,7 @@ class CreateReservations < ActiveRecord::Migration[6.0]
       t.text   :contact
       t.integer :price,                null: false
       t.references :user,              null: false, foreign_key: true
-      # t.references :plan                , null: false, foreign_key: true
+    
 
       t.timestamps
     end
