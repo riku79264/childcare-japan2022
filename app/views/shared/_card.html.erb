@@ -1,41 +1,38 @@
-    <%# カード情報の入力 %>
-    <div class='credit-card-form'>
-      <h1 class='info-input-haedline'>
-        Payment Information
-      </h1>
-      <div class="big-form-group">
-        <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">カード情報</label>
-            <span class="indispensable">*</span>
-          </div>
-          <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"card number", maxlength:"16" %> 
-          <div class='available-card'>
-            <%= image_tag 'card-visa.gif', class: 'card-logo'%>
-            <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
-            <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
-            <%= image_tag 'card-amex.gif', class: 'card-logo'%>
-          </div>
+  <div class='credit-card-form'>
+    <h1 class='info-input-haedline'>
+      Payment Information
+    </h1>
+    <div class="big-form-group">
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">カード情報</label>
+          <span class="indispensable">*</span>
         </div>
-        <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">Expiration</label>
-            <span class="indispensable">*</span>
-          </div>
-          <div class='input-expiration-date-wrap'>
-            <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"MM" %> 
-            /
-            <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"YY" %> 
-          </div>
-        </div>
-        <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">CVV</label>
-            <span class="indispensable">*</span>
-          </div>
-          <%= f.text_field :cvc, class:"input-default", id:"card-cvc", placeholder:"CVV", maxlength:"4" %> 
+        <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"card number", maxlength:"16" %> 
+        <div class='available-card'>
+          <%= image_tag 'card-visa.gif', class: 'card-logo'%>
+          <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
+          <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
+          <%= image_tag 'card-amex.gif', class: 'card-logo'%>
         </div>
       </div>
-    </div>  
-
-    <%# /カード情報の入力 %>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">Expiration</label>
+          <span class="indispensable">*</span>
+        </div>
+        <div class='input-expiration-date-wrap'>
+          <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"MM" %> 
+          /
+          <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"YY" %> 
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">CVV</label>
+          <span class="indispensable">*</span>
+        </div>
+        <%= f.text_field :cvc, class:"input-default", id:"card-cvc", placeholder:"CVV", maxlength:"4" %> 
+      </div>
+    </div>
+  </div>  

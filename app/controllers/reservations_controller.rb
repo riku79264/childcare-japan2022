@@ -1,30 +1,38 @@
 class ReservationsController < ApplicationController
+  before_action :set_reservation, only: [:new, :standard, :advanced]
+
   def index
-    @reservation = Reservation.new
+    
   end
 
   def new
-    @reservation = Reservation.new
-
+   
   end
 
   def create
+    # binding.pry
     @reservation = Reservation.new(reservation_params)
+    # @reservation.price = reservation_params[:price]
     if @reservation.valid?
        pay_item
        @reservation.save
        redirect_to root_path
-    else
+    elsif reservation_params[:price] == "13000"
       render :new
-    end
-  end
+    elsif reservation_params[:price] == "20000" 
+      render :standard
+    else reservation_params[:price] == "30000" 
+      render :advanced
+    end  
+  end  
+  
 
   def standard
-    @reservation = Reservation.new
+   
   end
 
   def advanced
-    @reservation = Reservation.new
+   
   end
 
   private
@@ -41,4 +49,38 @@ class ReservationsController < ApplicationController
         currency: 'jpy'                
       )
   end
+
+  def set_reservation
+    @reservation = Reservation.new
+  end
 end
+
+
+# else
+#   if reservation_params[:price] < 13000
+#     render :new
+#   else
+#     if reservation_params[:price] < 20000
+#       render :standard
+#     else
+#       render :advanced
+#     end
+#   end  
+# end
+
+ 
+# elsif reservation_params[:price] >= 30000  then
+#   render :advanced
+# elsif reservation_params[:price] >= 20000 then
+#   render :standard
+# else eservation_params[:price] >= 13000 
+#   render :new
+# end  
+
+# elsif reservation_params[:price] = 13000 then
+#   render :new
+# elsif reservation_params[:price] = 20000 then
+#   render :standard
+# else reservation_params[:price] = 30000 
+#   render :advanced
+# end  

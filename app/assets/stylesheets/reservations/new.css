@@ -11,9 +11,29 @@
   color: red;
 }
 
+.transaction-title-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buy-item-text {
+  margin: 20px 0px 20px 0px;
+  
+}
+
+.item-price-text {
+  padding: 20px 0px;
+  border-bottom: solid rgb(226, 225, 225);
+  border-top: solid rgb(226, 225, 225);
+}
+
+.item-price-text {
+  text-align: center;
+}
 /* カード情報 */
 .info-input-haedline {
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 50px;
 }
 
 .big-form-group {
@@ -44,12 +64,16 @@
 }
 
 /* 申し込み時に必要な項目 */
+.info-input-reservation {
+  font-size: 20px;
+}
 .reservation-form {
   margin-top: 50px;
 }
 .select-box {
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
 .input-default-allergy {
@@ -80,18 +104,15 @@
   height: 60px;
   width: 100%;
   font-size: 25px;
-  margin-top: 30px;
+  margin: 20px 0px 15px 0px;
   color: rgb(245, 248, 250);
 }
 
 .back-btn-final  {
-
   border: solid rgb(226, 225, 225);
   border-radius: 5px;
-  background-color:  rgb(234, 230, 230);
-  height: 200px;
-  width: 300px;
-  font-size: 40px;
-  margin-top: 20px;
-  color: rgb(245, 248, 250);
+  background-color:  rgb(109, 101, 101);
+  font-size: 25px;
+  color: rgb(237, 242, 245);
+  padding: 10px 100px;
 }

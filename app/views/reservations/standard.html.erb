@@ -2,7 +2,7 @@
   <%= form_with model: @reservation,  id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %> 
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
-      申し込みプラン内容の確認
+      Confirmation of application plan contents
     </h1>
     <%# 申し込みプラン、支払い金額の表示 %>
     <div class='buy-item-info'>
@@ -12,7 +12,7 @@
           ・traditional craft experience
         </h2>
         <div class='buy-item-price'>
-          <div class='item-price-text'>¥147</div> 
+          <div class='item-price-text'>purchase price 147$</div> 
           <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "20000"  %>
         </div>
       </div>
@@ -64,7 +64,7 @@
     <%# 申し込み時に必要な項目入力 %>
     <div class='reservation-form'>
       <h1 class='info-input-reservation'>
-        申し込み事項入力
+        Enter application items
       </h1>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -121,7 +121,7 @@
 
     <%# 下部ボタン %>
     <div class="reserve-btn-contents">
-      <li><%= f.submit "予約" ,class:"reserve-btn-text-final", id:"button"%></li>
+      <li><%= f.submit "reserve" ,class:"reserve-btn-text-final", id:"button"%></li>
       <li><%=link_to 'back', reservations_path, class:"back-btn-final" %></li>
     </div>
     <%# /下部ボタン %>

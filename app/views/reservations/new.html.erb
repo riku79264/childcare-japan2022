@@ -2,7 +2,7 @@
   <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
-      申し込みプラン内容の確認
+      Confirmation of application plan contents
     </h1>
     <%# 申し込みプラン、支払い金額の表示 %>
     <div class='buy-item-info'>
@@ -12,7 +12,7 @@
           ・traditional craft experience
         </h2>
         <div class='buy-item-price'>
-          <div class='item-price-text'>¥96</div> 
+          <div class='item-price-text'>Purchase price  96$</div> 
           <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
         </div>
       </div>
@@ -58,13 +58,13 @@
           <%= f.text_field :cvc, class:"input-default", id:"card-cvc", placeholder:"CVV", maxlength:"4" %> 
         </div>
       </div>
-    </div>  
+    </div>
     <%# /カード情報の入力 %>
 
     <%# 申し込み時に必要な項目入力 %>
     <div class='reservation-form'>
       <h1 class='info-input-reservation'>
-        申し込み事項入力
+        Enter application items
       </h1>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -114,14 +114,14 @@
           <label class="form-text">Contact</label>
           <span class="indispensable-optional">optional</span>
         </div>
-         <%= f.text_area :contact, class:"input-default-contact", id:"contact", placeholder:"(Up to 800 characters)", maxlength:"1000"%>
+          <%= f.text_area :contact, class:"input-default-contact", id:"contact", placeholder:"(Up to 800 characters)", maxlength:"1000"%>
       </div>
     </div>  
     <%# /申し込み内容の入力 %>
 
     <%# 下部ボタン %>
     <div class="reserve-btn-contents">
-      <li><%= f.submit "予約申し込み" ,class:"reserve-btn-text-final", id:"button"%></li>
+      <li><%= f.submit "reserve" ,class:"reserve-btn-text-final", id:"button"%></li>
       <li><%=link_to 'back', reservations_path, class:"back-btn-final" %></li>
     </div>
     <%# /下部ボタン %>
