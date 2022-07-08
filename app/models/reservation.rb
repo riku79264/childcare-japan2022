@@ -8,8 +8,8 @@ class Reservation < ApplicationRecord
   with_options presence: true do
     validates :children_name
     validates :nationality
-    validates :phone_number
-    validates :price
+    validates :phone_number, format: {with: /\A[0-9]+\z/, message: "Half-width number"}
+    validates :price, format: {with: /\A[0-9]+\z/, message: "Half-width number"}
     validates :user_id
     validates :token
   end  
