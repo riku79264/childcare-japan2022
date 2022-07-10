@@ -39,13 +39,13 @@
               <td>
                 <% if check_reservation(reservations, day, time) %>
                   <%= '×' %>
-                <% else %>
-                  <!-- 追加 -->
+                  <% elsif  %>
                   <%= link_to new_reservation_path(day: day, time: time) do %>
                     <%= '○' %>
                   <% end %>
-                  <!-- ここまで -->
+                  
                 <% end %>
+
               </td>
             <% end %>
           </tr>
