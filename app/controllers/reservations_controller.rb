@@ -5,7 +5,26 @@ class ReservationsController < ApplicationController
     
   end
 
+  def calender
+    @reservations = Reservation.all.where("day >= ?", Date.current).where("day < ?", Date.current >> 3).order(day: :desc)
+  end
+
   def new
+    @day = params[:day]
+    @time = params[:time]
+    @start_time = DateTime.parse(@day + " " + @time + " " + "JST")
+
+    message = Reservation.check_reservation_day(@day.to_date)
+    if !!message
+      redirect_to @reservation, flash: { alert: message }
+    end
+  end
+
+  def standard
+   
+  end
+
+  def advanced
    
   end
 
@@ -16,7 +35,7 @@ class ReservationsController < ApplicationController
     if @reservation.valid?
        pay_item
        @reservation.save
-       redirect_to root_path
+       redirect_to reservation_path @reservation.id
     elsif reservation_params[:price] == "13000"
       render :new
     elsif reservation_params[:price] == "20000" 
@@ -25,20 +44,15 @@ class ReservationsController < ApplicationController
       render :advanced
     end  
   end  
-  
 
-  def standard
-   
-  end
-
-  def advanced
-   
+  def show
+    @reservation = Reservation.find(params[:id])
   end
 
   private
 
   def reservation_params
-    params.require(:reservation).permit(:children_name, :children_number_id, :allergy, :age_id, :nationality, :phone_number, :contact, :price).merge(user_id: current_user.id, token: params[:token])
+    params.require(:reservation).permit(:children_name, :children_number_id, :allergy, :age_id, :nationality, :phone_number, :contact, :price, :day, :time, :start_time).merge(user_id: current_user.id, token: params[:token])
   end
 
   def pay_item
