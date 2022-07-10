@@ -16,6 +16,7 @@
         <br>Please spend a relaxing time as an adult<br>
       </h2>
       <%# 画面右の「プラン一覧」部分 %>
+      <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
       <div class='plan-form'>
         <div class='ad-plan'>
           plan
@@ -27,7 +28,8 @@
             <div class='per'>$/per child</div>
             <div class='plan-name-no'>・No food experience<br>(bringing in meals)</div>
             <div class='plan-name-craft'>・traditional craft experience</div>
-            <div><%= link_to 'reserve', calender_reservations_path, class:"reserve-btn-text" %></div>
+            <div><%= link_to 'reserve',  new_reservation_path, class:"reserve-btn-text" %></div>
+            <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
           </li>
           <li class="price-card">
             <h3>standard</h3>
@@ -35,7 +37,8 @@
             <div class='per'>$/per child</div>
             <div class='plan-name-food'>・food experience</div>
             <div class='plan-name-craft'>・traditional craft experience</div>
-            <div><%= link_to 'reserve', calender_reservations_path, class:"reserve-btn-text" %></div>
+            <div><%= link_to 'reserve', standard_reservations_path, class:"reserve-btn-text" %></div>
+            <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "20000"  %>
           </li>
           <li class="price-card">
             <h3>advanced</h3>
@@ -45,9 +48,13 @@
             <div class='plan-name-craft'>・traditional craft experience</div>
             <div class='plan-name-gift'>・experience gift ticket</div>
             <div><%= link_to 'reserve', advanced_reservations_path, class:"reserve-btn-text" %></div>
+            <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "30000"  %>
           </li>
         </ul>
       </div>  
+      <% end %>
     </div> 
+    
   </div>
+
 </div>
