@@ -31,7 +31,6 @@ class ReservationsController < ApplicationController
   def create
     # binding.pry
     @reservation = Reservation.new(reservation_params)
-    # @reservation.price = reservation_params[:price]
     if @reservation.valid?
        pay_item
        @reservation.save
@@ -70,31 +69,3 @@ class ReservationsController < ApplicationController
 end
 
 
-# else
-#   if reservation_params[:price] < 13000
-#     render :new
-#   else
-#     if reservation_params[:price] < 20000
-#       render :standard
-#     else
-#       render :advanced
-#     end
-#   end  
-# end
-
- 
-# elsif reservation_params[:price] >= 30000  then
-#   render :advanced
-# elsif reservation_params[:price] >= 20000 then
-#   render :standard
-# else eservation_params[:price] >= 13000 
-#   render :new
-# end  
-
-# elsif reservation_params[:price] = 13000 then
-#   render :new
-# elsif reservation_params[:price] = 20000 then
-#   render :standard
-# else reservation_params[:price] = 30000 
-#   render :advanced
-# end  
