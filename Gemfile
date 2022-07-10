@@ -60,3 +60,4 @@ gem 'pry-rails'
 gem 'payjp'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
+gem "simple_calendar", "~> 2.0"

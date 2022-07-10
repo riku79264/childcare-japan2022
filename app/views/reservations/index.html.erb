@@ -27,7 +27,7 @@
             <div class='per'>$/per child</div>
             <div class='plan-name-no'>・No food experience<br>(bringing in meals)</div>
             <div class='plan-name-craft'>・traditional craft experience</div>
-            <div><%= link_to 'reserve', new_reservation_path, class:"reserve-btn-text" %></div>
+            <div><%= link_to 'reserve', calender_reservations_path, class:"reserve-btn-text" %></div>
           </li>
           <li class="price-card">
             <h3>standard</h3>
@@ -35,7 +35,7 @@
             <div class='per'>$/per child</div>
             <div class='plan-name-food'>・food experience</div>
             <div class='plan-name-craft'>・traditional craft experience</div>
-            <div><%= link_to 'reserve', standard_reservations_path, class:"reserve-btn-text" %></div>
+            <div><%= link_to 'reserve', calender_reservations_path, class:"reserve-btn-text" %></div>
           </li>
           <li class="price-card">
             <h3>advanced</h3>
@@ -47,9 +47,7 @@
             <div><%= link_to 'reserve', advanced_reservations_path, class:"reserve-btn-text" %></div>
           </li>
         </ul>
-
       </div>  
     </div> 
   </div>
-
 </div>

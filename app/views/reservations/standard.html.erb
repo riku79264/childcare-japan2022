@@ -25,6 +25,22 @@
       <h1 class='info-input-haedline'>
         Payment Information
       </h1>
+       <%# #//////////////////////////////////// %>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">日付</label>
+        </div>
+        <%= f.text_field :day, class: "input-default", value: @day, id:"children-name", readonly: true %>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">時間</label>
+        </div>
+        <%= f.text_field :time, class: "input-default", value: @time, id:"children-name", readonly: true %>
+      </div>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :start_time, value: @start_time %>
+      <%# /#/////////////////////////////////////////////// %>
       <div class="big-form-group">
         <div class="form-group">
           <div class='form-text-wrap'>
