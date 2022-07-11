@@ -61,4 +61,4 @@ gem 'payjp'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem "simple_calendar", "~> 2.0"
-# gem 'validates_timeliness', '~> 6.0.0.beta2'
+gem 'validates_timeliness', '~> 6.0.0.beta2'
