@@ -13,11 +13,30 @@ body {
 
 header {
   width: 100%;
-  padding: 30px 4% 10px;
+  padding: 20px 4% 10px 10px;
   position: fixed;
   top: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.hedder-img {
+  width: 40px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+}
+.hedder-list {
+  font-size: 24px;
+  color: #1d1c1c;
+  padding-top: 10px;
+}
+
+.brand-list {
+ margin-left: 30px;
+ font-size: 20px;
 }
 
 a {	
@@ -29,7 +48,6 @@ ul {
    list-style: none;
    margin: 0;
    display: flex;
-   margin: 0; padding: 0;
 }
 
 li {
