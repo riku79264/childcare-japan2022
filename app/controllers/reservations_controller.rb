@@ -5,19 +5,9 @@ class ReservationsController < ApplicationController
     
   end
 
-  def calender
-    @reservations = Reservation.all.where("day >= ?", Date.current).where("day < ?", Date.current >> 3).order(day: :desc)
-  end
-
   def new
-    @day = params[:day]
+    @day = params[:start_date]
     @time = params[:time]
-    @start_time = DateTime.parse(@day + " " + @time + " " + "JST")
-
-    message = Reservation.check_reservation_day(@day.to_date)
-    if !!message
-      redirect_to @reservation, flash: { alert: message }
-    end
   end
 
   def standard
@@ -28,6 +18,10 @@ class ReservationsController < ApplicationController
    
   end
 
+  def show
+    @reservation = Reservation.find(params[:id])
+  end
+  
   def create
     # binding.pry
     @reservation = Reservation.new(reservation_params)
@@ -44,14 +38,10 @@ class ReservationsController < ApplicationController
     end  
   end  
 
-  def show
-    @reservation = Reservation.find(params[:id])
-  end
-
   private
 
   def reservation_params
-    params.require(:reservation).permit(:children_name, :children_number_id, :allergy, :age_id, :nationality, :phone_number, :contact, :price, :day, :time, :start_time).merge(user_id: current_user.id, token: params[:token])
+    params.require(:reservation).permit(:children_name, :children_number_id, :allergy, :age_id, :nationality, :phone_number, :contact, :price, :start_date, :start_time, :time).merge(user_id: current_user.id, token: params[:token])
   end
 
   def pay_item

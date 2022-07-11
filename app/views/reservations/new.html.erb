@@ -66,23 +66,19 @@
       <h1 class='info-input-reservation'>
         Enter application items
       </h1>
-      <%# #//////////////////////////////////// %>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">日付</label>
         </div>
-          <%# <%= f.label :day, '日付' %>
-        <%= f.date_field :start_date, class: "input-default", value: @day, id:"children-name" %>
+        <%= f.date_field :start_date, class: "input-default", value: @day, id:"start-date", min: Date.current %>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">時間</label>
         </div>
-        <%# <%= f.label :time, '時間' %>
-        <%= f.time_field :time, class: "input-default", value: @time, id:"children-name" %>
+        <%= f.time_field :time, class: "input-default", value: @time, id:"time", min: "07:30", max: "16:30"%>
       </div>
       <%= f.hidden_field :user_id, value: current_user.id %>
-      <%# /#/////////////////////////////////////////////// %>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">Children_number</label>

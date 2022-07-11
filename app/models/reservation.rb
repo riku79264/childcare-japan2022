@@ -15,6 +15,18 @@ class Reservation < ApplicationRecord
     validates :start_date
     validates :time
   end  
+
+   validate :date_before_start
+
+  def date_before_start
+    errors.add(:start_date, "は過去の日付を選択できません") if start_date < Date.today
+  end
+
+  # def time_before_start
+  #   errors.add(:time, "はam7:30~pm12:00以外の時間帯を選択できません") if time != between: [9:00am 5:00pm]
+  # end
+
+
   belongs_to :user
   
   extend ActiveHash::Associations::ActiveRecordExtensions
