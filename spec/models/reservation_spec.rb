@@ -25,6 +25,24 @@ RSpec.describe Reservation, type: :model do
     end
 
     context '内容に問題がある場合' do
+      it 'start_dateがないと保存できないこと' do
+        @reservation.start_date = nil
+        @reservation.valid?
+        expect(@reservation.errors.full_messages).to include("Start date can't be blank")
+      end 
+
+      it 'start_dateが過去の日付だと保存できないこと' do
+        @reservation.start_date = '2022-06-30'
+        @reservation.valid?
+        expect(@reservation.errors.full_messages).to include("Start date cannot select past date")
+      end 
+
+      it 'timeがないと保存できないこと' do
+        @reservation.time = nil
+        @reservation.valid?
+        expect(@reservation.errors.full_messages).to include("Time can't be blank")
+      end 
+
       it 'children_number_idがないと保存できないこと' do
         @reservation.children_number_id = 1
         @reservation.valid?
@@ -32,7 +50,7 @@ RSpec.describe Reservation, type: :model do
       end 
       
       it 'children_nameがないと保存できないこと' do
-        @reservation.children_name =''
+        @reservation.children_name = ''
         @reservation.valid?
         expect(@reservation.errors.full_messages).to include("Children name can't be blank")
       end 
@@ -44,7 +62,7 @@ RSpec.describe Reservation, type: :model do
       end 
       
       it 'phone_numberがないと保存できないこと' do
-        @reservation.phone_number =''
+        @reservation.phone_number = ''
         @reservation.valid?
         expect(@reservation.errors.full_messages).to include("Phone number can't be blank")
       end 

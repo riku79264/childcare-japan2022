@@ -7,6 +7,8 @@ FactoryBot.define do
     age_id                {2}
     nationality           {"japan"}
     phone_number          {"08084849944"}
+    start_date            {"2022-09-30"}
+    time                  {"11:00"}
     association :user
   end
 end
