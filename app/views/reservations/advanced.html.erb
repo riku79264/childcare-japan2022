@@ -71,7 +71,7 @@
         <div class='form-text-wrap'>
           <label class="form-text">日付</label>
         </div>
-        <%= f.date_field :start_date, class: "input-default", value: @day, id:"children-name" %>
+        <%= f.date_field :start_date, class: "input-default", value: @day, id:"children-name", min: Date.current%>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
