@@ -23,29 +23,29 @@
         </div>
         <ul class="plans">
           <li class="price-card">
-            <h3>basic</h3>
+            <h3>0~1 years</h3>
             <h4>¥96</h4>
             <div class='per'>$/per child</div>
             <div class='plan-name-no'>・No food experience<br>(bringing in meals)</div>
-            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div class='plan-name-craft'>・woodworking experience</div>
             <div><%= link_to 'reserve',  new_reservation_path, class:"reserve-btn-text" %></div>
             <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
           </li>
           <li class="price-card">
-            <h3>standard</h3>
+            <h3>2~4 years</h3>
             <h4>¥147</h4>
             <div class='per'>$/per child</div>
             <div class='plan-name-food'>・food experience</div>
-            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div class='plan-name-craft'>・woodworking experience</div>
             <div><%= link_to 'reserve', standard_reservations_path, class:"reserve-btn-text" %></div>
             <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "20000"  %>
           </li>
           <li class="price-card">
-            <h3>advanced</h3>
+            <h3>4~6 years</h3>
             <h4>¥221</h4>
             <div class='per'>$/per child</div>
             <div class='plan-name-food'>・food experience</div>
-            <div class='plan-name-craft'>・traditional craft experience</div>
+            <div class='plan-name-craft'>・woodworking experience</div>
             <div class='plan-name-gift'>・experience gift ticket</div>
             <div><%= link_to 'reserve', advanced_reservations_path, class:"reserve-btn-text" %></div>
             <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "30000"  %>

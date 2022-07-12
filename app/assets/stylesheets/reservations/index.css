@@ -59,24 +59,27 @@ p {
    font-size: 12px;
 }
 
-.plan-name-no {
-  margin-top: 35px;
+/* .plan-name-no {
+  margin-top: 20px;
+  height: 20%;
   font-size: 19px;
-}
+} */
 
-.plan-name-craft {
+/* .plan-name-craft {
   margin: 15px ;
   font-size: 19px;
-}
+  height: 20%;
+} */
 
-.plan-name-food {
-  margin-top: 35px;
+/* .plan-name-food {
+  margin-top: 20px;
   font-size: 19px;
-}
+  
+} */
 
-.plan-name-gift {
+/* .plan-name-gift {
   margin-bottom: 10px;
-}
+} */
 .reserve-btn-text {
  border: solid rgb(226, 225, 225);
  padding: 5px;
