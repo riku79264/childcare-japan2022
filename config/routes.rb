@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     collection do
      get :standard
      get :advanced
-     get :calender
+     get :content
     end 
 
   end  
