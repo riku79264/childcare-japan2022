@@ -1,0 +1,54 @@
+.check-main{
+  height: 100vh;
+  padding-top: 70px;
+}
+
+
+.check-body {
+  height: 40%;
+  width: 40%;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.check-title {
+  font-size: 30px;
+  text-align: center;
+ 
+}
+
+.check-content {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.check-content-list {
+  font-size: 20px;
+  
+}
+
+.check-bottom {
+  margin-top: 30px;
+  border-bottom: solid rgb(226, 225, 225);
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+
+@media (max-width: 599px) {
+  .check-body {
+    width: 70%;
+  }
+  .check-title {
+    font-size: 20px;
+  }
+  .check-content {
+    margin-top: 40px;
+    width: 70%;
+  }
+  
+}

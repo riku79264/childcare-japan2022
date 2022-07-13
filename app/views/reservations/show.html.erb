@@ -1,20 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 text-center title">
-      <h1>予約詳細画面</h1>
+<div class='check-main'>
+  <div class="check-body">
+    <div class='check-title'>
+      <h1>Reservation details screen</h1>
     </div>
-    <div class="col-12 mt-3 text-center content">
-      <div>
-        <label><strong>日付：</strong></label>
-        <div class="display:inline;"><%= @reservation.start_date %></div>
+    <div class='check-content'>
+      <div class='check-content-list'>
+        date：
+        <%= @reservation.start_date %>
       </div>
-      <div>
-        <label><strong>時間：</strong></label>
-        <div class="display:inline;"><%= @reservation.time %></div>
+      <div class='check-content-list'>
+        time：
+        <%= @reservation.time %>
       </div>
-    </div>
-    <div class="col-12 text-right">
-      <%= link_to '予約画面に戻る', reservations_path %>
+      <div class='check-bottom'>
+        <%= link_to 'Top page', reservations_path %>
+      </div>
     </div>
   </div>
 </div>
