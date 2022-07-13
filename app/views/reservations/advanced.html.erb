@@ -29,7 +29,7 @@
       <div class="big-form-group">
         <div class="form-group">
           <div class='form-text-wrap'>
-            <label class="form-text">カード情報</label>
+            <label class="form-text">Card</label>
             <span class="indispensable">*</span>
           </div>
           <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"card number", maxlength:"16" %> 
@@ -69,13 +69,15 @@
       </h1>
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">日付</label>
+          <label class="form-text">Date</label>
+          <span class="indispensable">*</span>
         </div>
         <%= f.date_field :start_date, class: "input-default", value: @day, id:"children-name", min: Date.current%>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">時間</label>
+          <label class="form-text">Time</label>
+          <span class="indispensable">*</span>
         </div>
         <%= f.time_field :time, class: "input-default", value: @time, id:"children-name" %>
       </div>
