@@ -29,7 +29,7 @@ p {
 }
 
 .plan-form {
-  height: 1150px;
+  height: 500px;
   margin: 150px 25px 30px 30px;
   text-align: center; 
 }
@@ -187,5 +187,9 @@ p {
     
   .price-card {
     height: 400px;
+ }
+
+ .plan-form {
+  height: 1150px;
  }
 }
