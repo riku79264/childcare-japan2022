@@ -119,7 +119,7 @@ nav {
   .brand-list {
     margin: 0px 0px 0px 5px;
     display: flex;
-    font-size: 7px;
+    font-size: 10px;
    }
    
    li {
@@ -132,8 +132,3 @@ nav {
   }
 }
 
-@media (max-width: 200px) {
-.brand-list {
-  margin: 0px 0px 2px 5px;
- }
-}
