@@ -32,15 +32,14 @@ header {
   margin-top: 10px;
 }
 .hedder-list {
-  font-size: 23px;
+  font-size: 21px;
   color: #1d1c1c;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .brand-list {
  margin-left: 35px;
  font-size: 20px;
- margin-bottom: 3px;
 }
 
 a {	
@@ -108,7 +107,7 @@ nav {
   
   .hedder-img {
     width: 15px;
-    margin: 5px 0px 0px 15px;
+    margin: 5px 0px 0px 10px;
   }
 
   .hedder-list {
@@ -131,4 +130,10 @@ nav {
   .user-nickname {
     margin-right: 5px;
   }
+}
+
+@media (max-width: 200px) {
+.brand-list {
+  margin: 0px 0px 2px 5px;
+ }
 }
