@@ -16,7 +16,7 @@ p {
   font-size: 30px;
   font-weight: normal;
   color: #fff;
-  text-align: center;
+  
 }
 
 /* // plan一覧 */
@@ -111,10 +111,22 @@ p {
 }
 
 
-@media (max-width: 1015px) {
+@media (max-width: 1020px) {
+  .contents {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-visual {
+   width: 100%;
+  }
+
+  p {
+    font-size: 30px;
+    width: 90%;
+  }
   /* plan一覧 */
   .plan-name-food {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 17px;
   }
   .plan-name-craft {
@@ -144,28 +156,15 @@ p {
  }
 }
 @media (max-width: 757px) {
-  .contents {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-visual {
-   width: 100%;
-  }
-
-  p {
-    font-size: 30px;
-    width: 90%;
-  }
-  
   /* plan一覧 */
   .plan-name-craft {
     font-size: 17px;
-    margin: 15px 10px 30px 10px;
+    margin: 15px 10px 15px 10px;
   }
 
   .plan-name-craft-one {
     font-size: 17px;
-    margin: 15px 10px 50px 10px;
+    margin: 15px 10px 15px 10px;
   }
 
   .plans {
