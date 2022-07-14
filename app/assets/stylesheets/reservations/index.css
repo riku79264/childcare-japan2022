@@ -1,4 +1,3 @@
-
 .contents {
   display: flex;
 }
@@ -17,17 +16,21 @@ p {
   font-size: 30px;
   font-weight: normal;
   color: #fff;
+  text-align: center;
 }
 
 /* // plan一覧 */
+.service-explain {
+  background-color: #faf4f4;
+}
 .ad-explain {
   margin: 250px 0 0 100px;
   
 }
 
 .plan-form {
-  height: 500px;
-  margin: 150px 25px 5px 30px;
+  height: 1150px;
+  margin: 150px 25px 30px 30px;
   text-align: center; 
 }
 
@@ -65,11 +68,11 @@ p {
    
 }
 
-.plan-group {
-  width: 100%;
-  height: 55%;
-  border-radius: 20px;
-}
+/* .plan-group {
+  /* width: 100%; */
+  /* height: 55%; */
+  /* border-radius: 20px; */
+
 .plan-name-no {
   margin-top: 25px;
   font-size: 17px;
@@ -151,17 +154,22 @@ p {
 
   p {
     font-size: 30px;
+    width: 90%;
   }
   
   /* plan一覧 */
-  .plan-name-craft-one {
-    /* background-color: rgb(130, 130, 211); */
+  .plan-name-craft {
     font-size: 17px;
-    margin: 15px 10px 10px 10px;
+    margin: 15px 10px 30px 10px;
+  }
+
+  .plan-name-craft-one {
+    font-size: 17px;
+    margin: 15px 10px 50px 10px;
   }
 
   .plans {
-    height: 100vh;
+    height: 1000px;
     margin: 50px 25px 5px 30px;
     text-align: center; 
     display: flex;
@@ -172,31 +180,12 @@ p {
     margin: 100px 30px 50px 30px;
   }
 
-  .plan-form {
-    height: 100vh;
-    margin: 50px 25px 5px 30px;
-    text-align: center; 
-  }
-
   .price-card h4 {
     font-size: 300%;
     margin-top: 20px;
  }
-  
- .transaction-form-wrap {
-  height: 100vh;
+    
+  .price-card {
+    height: 400px;
  }
- 
- .plan-group {
-  width: 100%;
-  height: 55%;
-  border-radius: 20px;
-}
-  
-.price-card {
-  border: solid rgb(226, 225, 225);
-  margin-top: 15px;
-  border-radius: 20px;
-  height: 400px;
-}
 }
