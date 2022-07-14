@@ -23,22 +23,24 @@ header {
 
 .hedder-img {
   width: 40px;
-  margin-bottom: 5%;
+  
 }
 
 .head {
   display: flex;
   align-items: flex-end;
+  margin-top: 10px;
 }
 .hedder-list {
-  font-size: 24px;
+  font-size: 23px;
   color: #1d1c1c;
   padding-top: 10px;
 }
 
 .brand-list {
- margin-left: 30px;
+ margin-left: 35px;
  font-size: 20px;
+ margin-bottom: 3px;
 }
 
 a {	
@@ -53,7 +55,7 @@ ul {
 }
 
 li {
-  margin: 0 5px 0 19px;
+  margin: 0px 5px 0px 19px;
   font-size: 18px;
 }
 
@@ -71,9 +73,8 @@ nav {
     
     padding: 20px 4% 10px 3%;
   }
-  
-  
 
+  
   .hedder-img {
     width: 15px;
     margin-bottom: 15%;
@@ -105,17 +106,15 @@ nav {
     padding: 10px 2% 10px 1%;
   }
   
-  
-
   .hedder-img {
     width: 15px;
-    margin-bottom: 15%;
+    margin: 5px 0px 0px 15px;
   }
 
   .hedder-list {
     font-size: 10px;
-    padding-top: 0px;
-    margin-left: 0px;
+    padding-top: 5px;
+    
   }
 
   .brand-list {
@@ -127,5 +126,9 @@ nav {
    li {
     margin: 0px 4px 0px 0px;
     font-size: 10px;
+  }
+
+  .user-nickname {
+    margin-right: 5px;
   }
 }
