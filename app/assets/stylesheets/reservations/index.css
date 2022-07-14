@@ -185,10 +185,17 @@ p {
  }
     
   .price-card {
-    height: 400px;
+    height: 500px;
+    background-color: aquamarine;
  }
 
- .plan-form {
-  height: 1150px;
- }
+  .plan-form {
+    height: 1150px;
+  }
+
+  .plan-name-gift {
+    margin: 7px 10px 8px 10px;
+    font-size: 17px;
+  }
+  
 }
