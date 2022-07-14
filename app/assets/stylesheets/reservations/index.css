@@ -22,6 +22,7 @@ p {
 /* // plan一覧 */
 .ad-explain {
   margin: 250px 0 0 100px;
+  
 }
 
 .plan-form {
@@ -40,12 +41,11 @@ p {
   margin-top: 15px;
   border-radius: 20px;
   height: 400px;
-  /* background-color: aliceblue; */
-  
 }
 
 .reserve-btn-text {
   padding-top: 40px;
+  
 }
 
 .price-card h3 {
@@ -69,42 +69,33 @@ p {
   width: 100%;
   height: 55%;
   border-radius: 20px;
-  /* background-color: rgb(235, 149, 118); */
 }
 .plan-name-no {
-  /* background-color: rgb(125, 118, 109); */
   margin-top: 25px;
   font-size: 17px;
-  /* background-color: antiquewhite; */
 }
 
 .plan-name-food {
   margin-top: 35px;
   font-size: 17px;
-  /* background-color: antiquewhite; */
 }
 
 .plan-name-craft {
   font-size: 17px;
   margin: 20px 20px 50px 20px;
-  
-  /* background-color: aquamarine; */
 }
 
 .plan-name-craft-one {
-  /* background-color: rgb(130, 130, 211); */
   font-size: 17px;
   margin: 30px 20px 55px 20px;
 }
 .plan-name-craft-another {
-  /* background-color: rgb(130, 130, 211); */
   font-size: 17px;
   margin: 30px 20px 20px 20px;
 }
 
 .plan-name-gift {
   margin: 7px 22px 15px 22px;
-  /* background-color: rgb(84, 161, 229); */
   font-size: 17px;
 }
 
@@ -117,3 +108,95 @@ p {
 }
 
 
+@media (max-width: 1015px) {
+  /* plan一覧 */
+  .plan-name-food {
+    margin-top: 25px;
+    font-size: 17px;
+  }
+  .plan-name-craft {
+    font-size: 17px;
+    margin: 10px;
+  }
+
+  .plan-name-craft-one {
+    font-size: 17px;
+    margin: 10px;
+  }
+
+  .plan-name-craft-another {
+    font-size: 17px;
+    margin: 10px;
+  }
+
+  .plan-name-gift {
+    margin: 10px;
+    font-size: 17px;
+  }
+
+  .price-card h4 {
+    font-size: 150%;
+    margin-top: 20px;
+    
+ }
+}
+@media (max-width: 757px) {
+  .contents {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-visual {
+   width: 100%;
+  }
+
+  p {
+    font-size: 30px;
+  }
+  
+  /* plan一覧 */
+  .plan-name-craft-one {
+    /* background-color: rgb(130, 130, 211); */
+    font-size: 17px;
+    margin: 15px 10px 10px 10px;
+  }
+
+  .plans {
+    height: 100vh;
+    margin: 50px 25px 5px 30px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ad-explain {
+    margin: 100px 30px 50px 30px;
+  }
+
+  .plan-form {
+    height: 100vh;
+    margin: 50px 25px 5px 30px;
+    text-align: center; 
+  }
+
+  .price-card h4 {
+    font-size: 300%;
+    margin-top: 20px;
+ }
+  
+ .transaction-form-wrap {
+  height: 100vh;
+ }
+ 
+ .plan-group {
+  width: 100%;
+  height: 55%;
+  border-radius: 20px;
+}
+  
+.price-card {
+  border: solid rgb(226, 225, 225);
+  margin-top: 15px;
+  border-radius: 20px;
+  height: 400px;
+}
+}
