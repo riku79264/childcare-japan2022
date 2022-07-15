@@ -1,24 +1,29 @@
 .experience-contents {
   width: 80%;
+  
   margin: 0 auto;
+  background-color: rgb(250, 228, 215);
 }
 
 
-/* ごはん*/
+/* ごはん///////////////////////////////////////////*/
 .food-groups {
   height: 700px;
   padding-top: 100px;
   display: flex; 
   justify-content: space-between; 
+  background-color: rgb(118, 217, 247);
 }
-/* ごはん（写真）*/
+/* ごはん（写真）///////////////////////////////////////*/
 .food-image {
   width: 40%;
   height: 90%;
+  background-color: rgb(127, 124, 221);
 }
 
-.big-img {
+.honshishamo-img {
   width: 100%;
+  margin-bottom: 10px;
   border-radius: 20px;
 }
 
@@ -32,18 +37,21 @@
   border-radius: 20px;
 }
 
-/* ごはん（説明）*/
+/* ごはん（説明）////////////////////////////////////*/
 .food-explain {
   height: 90%;
   width: 50%;
+  background-color: rgb(163, 121, 121);
 }
 
 .left-explain {
   margin-top: 20px;
+  background-color: #ecfab4;
 }
 
 .explain-example {
   margin-top: 20px;
+  background-color: blueviolet;
 }
 
 .food-explain-hokkaido {
@@ -53,12 +61,13 @@
 .example-contents {
   margin-top: 10px;
 }
-/* 伝統工芸 */
+/* 伝統工芸///////////////////////////////////////// */
 .craft-groups {
   height: 500px;
   display: flex; 
   justify-content: space-between; 
   padding-top: 100px;
+  background-color: rgb(245, 148, 148);
 }
 
 .craft-image {
@@ -85,12 +94,13 @@
   border-radius: 20px;
 }
 
-/* ギフト */
+/* ギフト //////////////////////////////////////////*/
 .gift-groups {
   height: 900px;
   padding-top: 100px;
   display: flex; 
   justify-content: space-between; 
+  background-color: rgb(77, 239, 74);
 }
 
 .gift-image {
@@ -116,3 +126,87 @@
 }
 
 
+@media (max-width: 995px) {
+  .food-groups {
+    height: 1100px;
+    padding-top: 50px;
+    display: flex; 
+    flex-direction: column-reverse;
+    background-color: rgb(118, 217, 247);
+  }
+
+  .food-explain {
+    height: 55%;
+    width: 100%;
+    background-color: rgb(163, 121, 121);
+  }
+  
+  .food-explain-hokkaido {
+    font-size: 30px;
+  }
+  
+  .left-explain {
+    padding: 20px;
+    background-color: #ecfab4;
+  }
+
+  .explain-example {
+    font-size: 25px;
+    background-color: blueviolet;
+  }
+
+  .food-image {
+    width: 100%;
+    height: 40%;
+    background-color: rgb(127, 124, 221);
+  }
+
+  /* 料理写真///////////////////////////////////*/
+  .honshishamo-img {
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 757px) {
+  .food-groups {
+    height: 1300px;
+    padding-top: 50px;
+    
+  }
+  .food-image {
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgb(127, 124, 221);
+  }
+
+  .shishamotenpura-img {
+    width: 90%;
+    height: 25%;
+  }
+
+  .cabocha-img {
+    width: 90%;
+    margin-top: 10px;
+    height: 30%;
+  }
+  
+}
+
+@media (max-width: 757px) {
+  .food-image {
+    height: 30%;
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgb(127, 124, 221);
+  }
+}
+
+@media (max-width: 412px) {
+  .food-image {
+    height: 25%;
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgb(127, 124, 221);
+  }
+}
