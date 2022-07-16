@@ -1,7 +1,7 @@
 .experience-contents {
   width: 90%;
   margin: 0 auto;
-  background-color: rgb(250, 228, 215);
+  /* background-color: rgb(250, 228, 215); */
 }
 
 
@@ -11,13 +11,13 @@
   padding-top: 70px;
   display: flex; 
   justify-content: space-between; 
-  background-color: rgb(118, 217, 247);
+  /* background-color: rgb(118, 217, 247); */
 }
 /* ごはん（写真）////////////////////////////////////*/
 .food-image {
   width: 40%;
   height: 100%;
-  background-color: rgb(127, 124, 221);
+  /* background-color: rgb(127, 124, 221); */
 }
 
 .img-fluid {
@@ -37,18 +37,18 @@
 .text-sm-start {
   height: auto;
   width: 45%;
-  background-color: rgb(163, 121, 121);
+  /* background-color: rgb(163, 121, 121); */
 }
 
 .left-explain {
   width: 100%;
   padding: 20px;
-  background-color: #ecfab4;
+  /* background-color: #ecfab4; */
 }
 
 .explain-example {
   margin-top: 20px;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .food-explain-hokkaido {
@@ -58,7 +58,7 @@
 .example-contents {
   margin-top: 10px;
   padding: 0px 10px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 /* 伝統工芸///////////////////////////////////////// */
 .craft-groups {
@@ -66,13 +66,13 @@
   display: flex; 
   justify-content: space-between; 
   margin-top: 50px;
-  background-color: rgb(245, 148, 148);
+  /* background-color: rgb(245, 148, 148); */
 }
 
 .craft-image {
   width: 40%;
   height: auto;
-  background-color: rgb(97, 164, 226);
+  /* background-color: rgb(97, 164, 226); */
 }
 
 .musicbox-img {
@@ -92,7 +92,7 @@
   margin-top: 100px;
   display: flex; 
   justify-content: space-between; 
-  background-color: rgb(77, 239, 74);
+  /* background-color: rgb(77, 239, 74); */
 }
 
 .gift-image {
@@ -100,7 +100,7 @@
   height: auto;
   padding: 20px;
   margin: 10px;
-  background-color: rgb(127, 124, 221);
+  /* background-color: rgb(127, 124, 221); */
 }
 
 @media (max-width: 1220px) {
@@ -109,20 +109,20 @@
     height: auto;
     display: flex; 
     flex-direction: column-reverse;
-    background-color: rgb(118, 217, 247);
+    /* background-color: rgb(118, 217, 247); */
   }
 
   .text-sm-start {
     height: 45%;
     width: 100%;
     margin-bottom: 50px;
-    background-color: rgb(163, 121, 121);
+    /* background-color: rgb(163, 121, 121); */
   }
   
   .food-image {
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(127, 124, 221);
+    /* background-color: rgb(127, 124, 221); */
   }
 
   .border-0 {
@@ -135,13 +135,13 @@
     height: auto;
     display: flex; 
     flex-direction: column;
-    background-color: rgb(232, 63, 11);
+    /* background-color: rgb(232, 63, 11); */
   }
 
   .craft-image {
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(127, 124, 221);
+    /* background-color: rgb(127, 124, 221); */
   }
 
   /* gift//////////////////////////////////// */
@@ -150,7 +150,7 @@
     height: auto;
     display: flex; 
     flex-direction: column-reverse;
-    background-color: white;
+    /* background-color: white; */
     padding-bottom: 50px;
   }
 
@@ -159,7 +159,7 @@
     height: auto;
     padding: 0px;
     margin: 0 auto;
-    background-color: rgb(127, 124, 221);
+    /* background-color: rgb(127, 124, 221); */
   }
 
   
