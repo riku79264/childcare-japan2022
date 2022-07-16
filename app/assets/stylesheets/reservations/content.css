@@ -1,148 +1,168 @@
 .experience-contents {
   width: 90%;
   margin: 0 auto;
-  background-color: rgb(250, 228, 215);
+  /* background-color: rgb(250, 228, 215); */
 }
 
 
 /* ごはん///////////////////////////////////////////*/
 .food-groups {
-  height: 700px;
-  padding-top: 100px;
+  height: 750px;
+  padding-top: 70px;
   display: flex; 
   justify-content: space-between; 
-  background-color: rgb(118, 217, 247);
+  /* background-color: rgb(118, 217, 247); */
 }
-
+/* ごはん（写真）////////////////////////////////////*/
 .food-image {
   width: 40%;
   height: 100%;
-  background-color: rgb(127, 124, 221);
+  /* background-color: rgb(127, 124, 221); */
 }
 
 .img-fluid {
-  border-radius: 7px;
+  border-radius: 15px;
   max-width: 100%;
   height: auto;
+  padding: 5px;
 }
-.img-thumbnail {
+.border-0 {
   width: 45%;
   height: 30%;
-  border-radius: 7px;
-  margin: 10px 0px 0px 5px;
-  max-width: 100%;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /* ごはん（説明）////////////////////////////////////*/
 .text-sm-start {
-  height: 90%;
-  width: 50%;
-  background-color: rgb(163, 121, 121);
+  height: auto;
+  width: 45%;
+  /* background-color: rgb(163, 121, 121); */
 }
 
 .left-explain {
-  margin-top: 20px;
+  width: 100%;
   padding: 20px;
-  background-color: #ecfab4;
+  /* background-color: #ecfab4; */
 }
 
 .explain-example {
   margin-top: 20px;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .food-explain-hokkaido {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .example-contents {
   margin-top: 10px;
+  padding: 0px 10px;
+  /* background-color: aqua; */
 }
 /* 伝統工芸///////////////////////////////////////// */
 .craft-groups {
-  height: 500px;
+  height: 700px;
   display: flex; 
   justify-content: space-between; 
-  padding-top: 100px;
-  background-color: rgb(245, 148, 148);
+  margin-top: 50px;
+  /* background-color: rgb(245, 148, 148); */
 }
 
 .craft-image {
   width: 40%;
-  height: 120%;
-}
-
-.woodflower-img {
-  width: 100%;
-  border-radius: 20px;
+  height: auto;
+  /* background-color: rgb(97, 164, 226); */
 }
 
 .musicbox-img {
   width: 60%;
-  border-radius: 20px;
-}
-.woodwork-img {
-  width: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .woodwork-small-img {
   width: 35%;
   border-radius: 20px;
+  margin-top: 15%;
 }
 
 /* ギフト //////////////////////////////////////////*/
 .gift-groups {
-  height: 900px;
-  padding-top: 100px;
+  height: 600px;
+  margin-top: 50px;
   display: flex; 
   justify-content: space-between; 
-  background-color: rgb(77, 239, 74);
+  /* background-color: rgb(77, 239, 74); */
 }
 
 .gift-image {
-  padding-top: 100px;
-  width: 60%;
-  height: 60%;
+  width: 55%;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  /* background-color: rgb(127, 124, 221); */
 }
 
-.ticket-explain {
-  width: 35%;
-  padding-top: 100px;
-}
-
-.ticket-img {
-  width: 90%;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  background-color: aliceblue;
-}
-
-.ticket-explain-hokkaido {
-  font-size: 30px;
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1220px) {
   .food-groups {
     max-width: 100%;
     height: auto;
     display: flex; 
     flex-direction: column-reverse;
-    background-color: rgb(118, 217, 247);
+    /* background-color: rgb(118, 217, 247); */
   }
 
   .text-sm-start {
     height: 45%;
     width: 100%;
     margin-bottom: 50px;
-    background-color: rgb(163, 121, 121);
+    /* background-color: rgb(163, 121, 121); */
   }
   
   .food-image {
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(127, 124, 221);
+    /* background-color: rgb(127, 124, 221); */
   }
+
+  .border-0 {
+    height: 200px;
+  }
+
+  /* craft/////////////////////////// */
+  .craft-groups {
+    max-width: 100%;
+    height: auto;
+    display: flex; 
+    flex-direction: column;
+    /* background-color: rgb(232, 63, 11); */
+  }
+
+  .craft-image {
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: rgb(127, 124, 221); */
+  }
+
+  /* gift//////////////////////////////////// */
+  .gift-groups {
+    max-width: 100%;
+    height: auto;
+    display: flex; 
+    flex-direction: column-reverse;
+    /* background-color: white; */
+    padding-bottom: 50px;
+  }
+
+  .gift-image {
+    width: 75%;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+    /* background-color: rgb(127, 124, 221); */
+  }
+
+  
 }
 
 @media (max-width: 501px) {
@@ -160,9 +180,19 @@
     max-width: 100%;
     height: auto;
   }
-  .img-thumbnail {
+  .border-0 {
     width: 100%;
     height: 150px;
   }
 }
 
+@media (max-width: 260px) {
+  .woodwork-small-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 2%;
+ }
+ .musicbox-img {
+  width: 100%;
+  }
+}

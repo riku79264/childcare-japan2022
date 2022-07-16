@@ -5,10 +5,9 @@
     <%# 食体験コンテンツ %>
     <div class='food-groups'>
       <div class='food-image'>
-        <%# <%= img_tag 'shishamo.jpg', class: "img-fluid" , alt="shishamo" %>
         <%= image_tag 'shishamo.jpg', class: "img-fluid" %> 
-        <%= image_tag 'shishamotenpura.jpg', class: "img-thumbnail" %>
-        <%= image_tag 'kabocha.jpg', class: "img-thumbnail" %>
+        <%= image_tag 'shishamotenpura.jpg', class: "border-0" %>
+        <%= image_tag 'kabocha.jpg', class: "border-0" %>
       </div>
       <div class='text-sm-start'>
         <div class='food-explain-hokkaido'>
@@ -19,11 +18,12 @@
             The food experience is an experience service where you can enjoy local cuisine by making local vegetables while hiding in the local food culture.<br>※（If your child is small or you bring in food and drink, the basic plan is recommended.）
           <div>
           <div class='explain-example'>
-            example</div>
+            example
+          </div>
           <div class='example-contents'>
             ・ Honshishamo tempura<br>Tempura is an extremely valuable fish that is endemic to Japan and inhabits only part of the Pacific Ocean side of Hokkaido.
           </div>
-           <div class='example-contents'>
+          <div class='example-contents'>
             ・Pumpkin dumpling<br>A Hokkaido home-cooked dish made by steaming pumpkin, crushing it, mixing it with potato starch and sugar, shaping it, and baking it in a frying pan.
           </div>
         </ul>
@@ -33,29 +33,30 @@
 
     <%# 伝統工芸コンテンツ %>
     <div class='craft-groups'>
-      <div class='food-explain'>
+      <div class='text-sm-start'>
         <div class='food-explain-hokkaido'>
-          woodworking experience
+          Woodworking experience
         </div>
         <ul>
           <div class='left-explain'>
             Woodworking experience is an experience service that uses wood from this village where forestry is thriving to create memorable woodworking works.
           <div>
           <div class='explain-example'>
-            example</div>
-          <div class='example-contents'>
-            ・Music box<br>Since it can record voice, it may be a good item to look back on when the child grew up.
+            example
           </div>
            <div class='example-contents'>
             ・Wood flower<br>It's like a car nation made of wood. We use scraps from the lumber processing plant in the village.
           </div>
+          <div class='example-contents'>
+            ・Music box<br>Since it can record voice, it may be a good item to look back on when the child grew up.
+          </div>
         </ul>
       </div>
       <div class='craft-image'>
+         <%= image_tag 'woodwork.JPEG', class: "img-fluid" %> 
          <%= image_tag 'musicbox.JPEG', class: "musicbox-img" %>
          <%= image_tag 'woodwork2.jpg', class: "woodwork-small-img" %> 
-         <%= image_tag 'woodwork.JPEG', class: "woodwork-img" %> 
-         
+         <%= image_tag 'woodspace', class: "img-fluid" %>
       </div>
     </div>
 
@@ -63,12 +64,12 @@
     <%# ギフトチケットコンテンツ %>
     <div class='gift-groups'>
       <div class='gift-image'>
-         <%= image_tag 'ticket.jpg', class: "ticket-img" %> 
-         <%= image_tag 'ticket2.jpg', class: "ticket-img" %> 
+         <%= image_tag 'ticket.jpg', class: "img-fluid" %> 
+         <%= image_tag 'ticket2.jpg', class: "img-fluid" %> 
       </div>
-      <div class='ticket-explain'>
-        <div class='ticket-explain-hokkaido'>
-          gift ticket
+      <div class='text-sm-start'>
+        <div class='food-explain-hokkaido'>
+          Gift ticket
         </div>
         <ul>
           <div class='left-explain'>
