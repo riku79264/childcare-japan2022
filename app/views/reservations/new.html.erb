@@ -1,146 +1,147 @@
-<div class='transaction-contents'>
-  <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
-  <div class='transaction-main'>
-    <h1 class='transaction-title-text'>
-      Confirmation of application plan contents
-    </h1>
-    <%# 申し込みプラン、支払い金額の表示 %>
-    <div class='buy-item-info'>
-      <div class='buy-item-right-content'>
-        <h2 class='buy-item-text'>
-          ・No food experience(bringing in meals)<br>
-          ・traditional craft experience
-        </h2>
-        <div class='buy-item-price'>
-          <div class='item-price-text'>Purchase price  96$</div> 
-          <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
+<div class='container'>
+  <div class='transaction-contents'>
+    <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <div class='transaction-main'>
+      <h1 class='transaction-title-text'>
+        Confirmation of application plan contents
+      </h1>
+      <%# 申し込みプラン、支払い金額の表示 %>
+      <div class='buy-item-info'>
+        <div class='buy-item-right-content'>
+          <h2 class='buy-item-text'>
+            ・No food experience(bringing in meals)<br>
+            ・traditional craft experience
+          </h2>
+          <div class='buy-item-price'>
+            <div class='item-price-text'>Purchase price  96$</div> 
+            <%= f.text_field :price, class:"input-default-price", id:"children-name", value: "13000"  %>
+          </div>
         </div>
       </div>
-    </div>
-    <%# /申し込みプラン、支払い金額の表示 %>
-    
-    <%= render 'shared/error_messages', model: f.object %>
-    <%# カード情報の入力 %>
-    <div class='credit-card-form'>
-      <h1 class='info-input-haedline'>
-        Payment Information
-      </h1>
-      <div class="big-form-group">
-        <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">Card</label>
-          <span class="indispensable">*</span>
+      <%# /申し込みプラン、支払い金額の表示 %>
+      
+      <%= render 'shared/error_messages', model: f.object %>
+      <%# カード情報の入力 %>
+      <div class='credit-card-form'>
+        <h1 class='info-input-haedline'>
+          Payment Information
+        </h1>
+        <div class="big-form-group">
+          <div class="form-group">
+            <div class='form-text-wrap'>
+              <label class="form-text">Card</label>
+            <span class="indispensable">*</span>
+            </div>
+            <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"card number", maxlength:"16" %> 
+            <div class='available-card'>
+              <%= image_tag 'card-visa.gif', class: 'card-logo'%>
+              <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
+              <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
+              <%= image_tag 'card-amex.gif', class: 'card-logo'%>
+            </div>
           </div>
-          <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"card number", maxlength:"16" %> 
-          <div class='available-card'>
-            <%= image_tag 'card-visa.gif', class: 'card-logo'%>
-            <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
-            <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
-            <%= image_tag 'card-amex.gif', class: 'card-logo'%>
+          <div class="form-group">
+            <div class='form-text-wrap'>
+              <label class="form-text">Expiration</label>
+              <span class="indispensable">*</span>
+            </div>
+            <div class='input-expiration-date-wrap'>
+              <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"MM" %> 
+              /
+              <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"YY" %> 
+            </div>
+          </div>
+          <div class="form-group">
+            <div class='form-text-wrap'>
+              <label class="form-text">CVV</label>
+              <span class="indispensable">*</span>
+            </div>
+            <%= f.text_field :cvc, class:"input-default", id:"card-cvc", placeholder:"CVV", maxlength:"4" %> 
           </div>
         </div>
+      </div>
+      <%# /カード情報の入力 %>
+
+      <%# 申し込み時に必要な項目入力 %>
+      <div class='reservation-form'>
+        <h1 class='info-input-reservation'>
+          Enter application items
+        </h1>
         <div class="form-group">
           <div class='form-text-wrap'>
-            <label class="form-text">Expiration</label>
+            <label class="form-text">Date</label>
             <span class="indispensable">*</span>
           </div>
-          <div class='input-expiration-date-wrap'>
-            <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"MM" %> 
-            /
-            <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"YY" %> 
-          </div>
+          <%= f.date_field :start_date, class: "input-default", value: @day, id:"start-date", min: Date.current %>
         </div>
         <div class="form-group">
           <div class='form-text-wrap'>
-            <label class="form-text">CVV</label>
+            <label class="form-text">Time</label>
             <span class="indispensable">*</span>
           </div>
-          <%= f.text_field :cvc, class:"input-default", id:"card-cvc", placeholder:"CVV", maxlength:"4" %> 
+          <%= f.time_field :time, class: "input-default", value: @time, id:"time", min: "07:30", max: "16:30"%>
         </div>
-      </div>
-    </div>
-    <%# /カード情報の入力 %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Children_number</label>
+            <span class="indispensable">*</span>
+          </div>  
+          <%= f.collection_select(:children_number_id, ChildrenNumber.all, :id, :children_number, {}, {class:"select-box", id:"children-number"}) %>
+        </div>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Children_name</label>
+            <span class="indispensable">*</span>
+          </div>
+          <%= f.text_field :children_name, class:"input-default", id:"children-name", placeholder:"last_name  first_name", maxlength:"20" %>  
+        </div>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Allergy</label>
+            <span class="indispensable-optional">optional</span>
+          </div>  
+          <%= f.text_area :allergy, class:"input-default-allergy", id:"allergy", placeholder:"example）egg, wheat, shrmp...（Up to 200 characters）", maxlength:"200" %>  
+        </div>
 
-    <%# 申し込み時に必要な項目入力 %>
-    <div class='reservation-form'>
-      <h1 class='info-input-reservation'>
-        Enter application items
-      </h1>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Date</label>
-          <span class="indispensable">*</span>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Age</label>
+            <span class="indispensable">*</span>
+          </div>
+          <%= f.collection_select(:age_id, Age.all, :id, :age, {}, {class:"select-box", id:"children-age"}) %>
         </div>
-        <%= f.date_field :start_date, class: "input-default", value: @day, id:"start-date", min: Date.current %>
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Time</label>
-          <span class="indispensable">*</span>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Nationality</label>
+            <span class="indispensable">*</span>
+          </div>
+          <%= f.text_field :nationality, class:"input-default", id:"natinality", placeholder:"example）Japan/Japanese", maxlength:"20" %>  
         </div>
-        <%= f.time_field :time, class: "input-default", value: @time, id:"time", min: "07:30", max: "16:30"%>
-      </div>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Children_number</label>
-          <span class="indispensable">*</span>
-        </div>  
-        <%= f.collection_select(:children_number_id, ChildrenNumber.all, :id, :children_number, {}, {class:"select-box", id:"children-number"}) %>
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Children_name</label>
-          <span class="indispensable">*</span>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Phone_number</label>
+            <span class="indispensable">*</span>
+          </div>
+          <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"例）09012345678", maxlength:"11"%>
         </div>
-        <%= f.text_field :children_name, class:"input-default", id:"children-name", placeholder:"last_name  first_name", maxlength:"20" %>  
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Allergy</label>
-          <span class="indispensable-optional">optional</span>
-        </div>  
-        <%= f.text_area :allergy, class:"input-default-allergy", id:"allergy", placeholder:"example）egg, wheat, shrmp...（Up to 200 characters）", maxlength:"200" %>  
-      </div>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">Contact</label>
+            <span class="indispensable-optional">optional</span>
+          </div>
+            <%= f.text_area :contact, class:"input-default-contact", id:"contact", placeholder:"(Up to 800 characters)", maxlength:"1000"%>
+        </div>
+      </div>  
+      <%# /申し込み内容の入力 %>
 
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Age</label>
-          <span class="indispensable">*</span>
-        </div>
-        <%= f.collection_select(:age_id, Age.all, :id, :age, {}, {class:"select-box", id:"children-age"}) %>
+      <%# 下部ボタン %>
+      <div class="reserve-btn-contents">
+        <li><%= f.submit "reserve" ,class:"reserve-btn-text-final", id:"button"%></li>
+        <li><%=link_to 'back', reservations_path, class:"back-btn-final" %></li>
       </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Nationality</label>
-          <span class="indispensable">*</span>
-        </div>
-        <%= f.text_field :nationality, class:"input-default", id:"natinality", placeholder:"example）Japan/Japanese", maxlength:"20" %>  
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Phone_number</label>
-          <span class="indispensable">*</span>
-        </div>
-        <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"例）09012345678", maxlength:"11"%>
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">Contact</label>
-          <span class="indispensable-optional">optional</span>
-        </div>
-          <%= f.text_area :contact, class:"input-default-contact", id:"contact", placeholder:"(Up to 800 characters)", maxlength:"1000"%>
-      </div>
+      <%# /下部ボタン %>
+      <% end %>
     </div>  
-    <%# /申し込み内容の入力 %>
-
-    <%# 下部ボタン %>
-    <div class="reserve-btn-contents">
-      <li><%= f.submit "reserve" ,class:"reserve-btn-text-final", id:"button"%></li>
-      <li><%=link_to 'back', reservations_path, class:"back-btn-final" %></li>
-    </div>
-    <%# /下部ボタン %>
-    <% end %>
   </div>  
-</div>  
-
+</div>
