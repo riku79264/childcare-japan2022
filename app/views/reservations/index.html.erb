@@ -1,7 +1,6 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-
   <div class='contents'>
     <%# 画面左の「少女の写真」部分 %>
     <div class='main-visual'>
@@ -11,10 +10,12 @@
     </div>
     <%# 画面右の「事業説明」部分 %>
     <div class='service-explain'>
-      <h2 class='ad-explain'>  
-        Our garden provides childcare for long-term Japanese tourists.
-        <br>Please spend a relaxing time as an adult<br>
-      </h2>
+      <div class='explain-form'>
+        <h2 class='ad-explain'>  
+          Our garden provides childcare for long-term Japanese tourists.
+          <br>Please spend a relaxing time as an adult<br>
+        </h2>
+      </div>
       <%# 画面右の「プラン一覧」部分 %>
       <%= form_with model: @reservation, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
       <div class='plan-form'>
@@ -57,7 +58,5 @@
       </div>  
       <% end %>
     </div> 
-    
   </div>
-
 </div>

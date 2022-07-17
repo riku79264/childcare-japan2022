@@ -28,6 +28,9 @@ p {
   
 }
 
+/* .transaction-form-wrap {
+  background-color: red;
+} */
 .plan-form {
   height: 500px;
   margin: 150px 25px 30px 30px;
@@ -67,11 +70,6 @@ p {
    font-size: 12px;
    
 }
-
-/* .plan-group {
-  /* width: 100%; */
-  /* height: 55%; */
-  /* border-radius: 20px; */
 
 .plan-name-no {
   margin-top: 25px;
@@ -132,16 +130,19 @@ p {
   .plan-name-craft {
     font-size: 17px;
     margin: 10px;
+    margin-bottom: 20px;
   }
 
   .plan-name-craft-one {
     font-size: 17px;
     margin: 10px;
+    margin-bottom: 20px;
   }
 
   .plan-name-craft-another {
     font-size: 17px;
     margin: 10px;
+    margin-bottom: 20px;
   }
 
   .plan-name-gift {
