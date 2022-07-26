@@ -79,7 +79,7 @@
           <label class="form-text">Time</label>
           <span class="indispensable">*</span>
         </div>
-        <%= f.time_field :time, class: "input-default", value: @time, id:"children-name" %>
+        <%= f.time_field :time, class: "input-default", value: @time, id:"children-name" min: "07:30", max: "12:30"%>
       </div>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <div class="form-group">
