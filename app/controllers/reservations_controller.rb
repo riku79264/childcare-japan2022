@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
+ 
   before_action :set_reservation, only: [:new, :standard, :advanced]
+  before_action :authenticate_user! , only: [:new,:standard, :advanced]
 
   def index
     
