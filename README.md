@@ -10,10 +10,10 @@ children-japan2022
 https://childcare-japan1206.herokuapp.com/
 
 # テスト用アカウント
-Basic認証パスワード: admin
-Basic認証ID: 2222
-. メールアドレス: test@tt 
-. パスワード: tenkin12
+  Basic認証パスワード: admin<br>
+  Basic認証ID: 2222<br>
+  メールアドレス: test@tt<br>
+  パスワード: tenkin12<br>
 
 # 予約方法
 1. トップページ(一覧ページ)のヘッダーからユーザー新規登録を行う.
@@ -49,11 +49,11 @@ Basic認証ID: 2222
 [![Image from Gyazo](https://i.gyazo.com/93689cd9b0473a46789254f78f62ba76.png)](https://gyazo.com/93689cd9b0473a46789254f78f62ba76)
 
 # 開発環境
-・ フロントサイド
-・ バックエンド
-・ インフラ
-・ テスト
-・ テキストエディタ
+・ フロントサイド<br>
+・ バックエンド<br>
+・ インフラ<br>
+・ テスト<br>
+・ テキストエディタ<br>
 
 
 
