@@ -38,10 +38,24 @@
   
 }
 
+@media (max-width: 975px) {
+  .check-body {
+    width: 55%;
+  }
+  .check-title {
+    font-size: 20px;
+  }
+  .check-content {
+    margin-top: 40px;
+    width: 70%;
+  }
+  
+}
 
 @media (max-width: 599px) {
   .check-body {
     width: 70%;
+    height: 50%;
   }
   .check-title {
     font-size: 20px;
